@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Cheaperlife</string>
+    <string name="title_home">附近</string>
+    <string name="title_dashboard">发现</string>
+    <string name="title_notifications">我的</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="Nearby_fragment">Nearby</string>
+    <string name="Discovery_fragment">Discovery</string>
+    <string name="Profile_fragment">Profile</string>
+</resources>
