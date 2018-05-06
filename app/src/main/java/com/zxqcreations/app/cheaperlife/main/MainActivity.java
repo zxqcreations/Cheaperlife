@@ -11,6 +11,7 @@ import android.view.MenuItem;
 
 import com.zxqcreations.app.cheaperlife.R;
 
+
 public class MainActivity extends AppCompatActivity implements Nearby.OnFragmentInteractionListener,
         Discovery.OnFragmentInteractionListener, Profile.OnFragmentInteractionListener{
 
@@ -55,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements Nearby.OnFragment
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
 
