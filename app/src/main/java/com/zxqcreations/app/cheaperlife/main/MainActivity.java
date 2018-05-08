@@ -17,32 +17,27 @@ public class MainActivity extends AppCompatActivity implements Nearby.OnFragment
 
     private FragmentManager manager;
     private FragmentTransaction transaction;
+    private Nearby nearby;
+    private Discovery discovery;
+    private Profile profile;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            manager = getFragmentManager();
+            transaction = manager.beginTransaction();
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    Nearby nearby = new Nearby();
-                    manager = getFragmentManager();
-                    transaction = manager.beginTransaction();
                     transaction.replace(R.id.main_fragment, nearby);
                     transaction.commit();
                     return true;
                 case R.id.navigation_dashboard:
-                    //mTextMessage.setText(R.string.title_dashboard);
-                    Discovery discovery = new Discovery();
-                    manager = getFragmentManager();
-                    transaction = manager.beginTransaction();
                     transaction.replace(R.id.main_fragment, discovery);
                     transaction.commit();
                     return true;
                 case R.id.navigation_notifications:
-                    Profile profile = new Profile();
-                    manager = getFragmentManager();
-                    transaction = manager.beginTransaction();
                     transaction.replace(R.id.main_fragment, profile);
                     transaction.commit();
                     return true;
@@ -55,13 +50,11 @@ public class MainActivity extends AppCompatActivity implements Nearby.OnFragment
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        nearby = new Nearby();
+        discovery = new Discovery();
+        profile = new Profile();
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
-
-
-        //LayoutInflater inflater = LayoutInflater.from(this);
 
     }
 
