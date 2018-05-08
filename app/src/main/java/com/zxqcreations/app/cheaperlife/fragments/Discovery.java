@@ -1,4 +1,4 @@
-package com.zxqcreations.app.cheaperlife.main;
+package com.zxqcreations.app.cheaperlife.fragments;
 
 import android.content.Context;
 import android.net.Uri;

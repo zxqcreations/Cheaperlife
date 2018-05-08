@@ -10,6 +10,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.zxqcreations.app.cheaperlife.R;
+import com.zxqcreations.app.cheaperlife.fragments.Discovery;
+import com.zxqcreations.app.cheaperlife.fragments.Nearby;
+import com.zxqcreations.app.cheaperlife.fragments.Profile;
 
 
 public class MainActivity extends AppCompatActivity implements Nearby.OnFragmentInteractionListener,
@@ -53,8 +56,14 @@ public class MainActivity extends AppCompatActivity implements Nearby.OnFragment
         nearby = new Nearby();
         discovery = new Discovery();
         profile = new Profile();
+        manager = getFragmentManager();
+        transaction = manager.beginTransaction();
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        transaction.replace(R.id.main_fragment, nearby).commit();
+
+
 
     }
 

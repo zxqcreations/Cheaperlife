@@ -1,4 +1,4 @@
-package com.zxqcreations.app.cheaperlife.main;
+package com.zxqcreations.app.cheaperlife.fragments;
 
 import android.content.Context;
 import android.net.Uri;
@@ -13,12 +13,12 @@ import com.zxqcreations.app.cheaperlife.R;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link Nearby.OnFragmentInteractionListener} interface
+ * {@link Profile.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link Nearby#newInstance} factory method to
+ * Use the {@link Profile#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Nearby extends Fragment{
+public class Profile extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -30,7 +30,7 @@ public class Nearby extends Fragment{
 
     private OnFragmentInteractionListener mListener;
 
-    public Nearby() {
+    public Profile() {
         // Required empty public constructor
     }
 
@@ -40,11 +40,11 @@ public class Nearby extends Fragment{
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Nearby.
+     * @return A new instance of fragment Profile.
      */
     // TODO: Rename and change types and number of parameters
-    public static Nearby newInstance(String param1, String param2) {
-        Nearby fragment = new Nearby();
+    public static Profile newInstance(String param1, String param2) {
+        Profile fragment = new Profile();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -65,7 +65,7 @@ public class Nearby extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_nearby, container, false);
+        return inflater.inflate(R.layout.fragment_profile, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -85,7 +85,6 @@ public class Nearby extends Fragment{
                     + " must implement OnFragmentInteractionListener");
         }
     }
-
 
     @Override
     public void onDetach() {
